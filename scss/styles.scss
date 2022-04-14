@@ -1,0 +1,147 @@
+$font-headings: 'Prata', serif;
+$font-body:'Inter', serif;
+$primary_color: black;
+$text-color: white;
+
+body{
+    background-color: $primary_color;
+    height: 100vh;
+    width: 90%;
+    margin-inline: auto;
+    color: $text-color;
+    font-family: $font-body;
+    padding:0px 15px;
+    
+}
+
+@mixin headings {
+    font-family: $font-headings;
+    font-size: 20px;
+    padding: 20px 0px;
+}
+
+@mixin li{
+    list-style: none;
+    text-decoration: none;
+    margin: 10px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+
+    h2{
+        @include headings();
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        display: none;
+    }
+    .hamburger{
+        margin-left: auto;
+    }
+}
+
+.leading{
+    h1{
+        font-family: $font-headings;
+        font-size: 20px;
+    }
+    p{
+        padding: 10px 0px;
+    }
+    .logos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        place-items: center;
+        width: auto;
+        height: auto;
+        padding: 40px 0px;
+
+        .visa{
+            justify-items: end;
+        }
+        .tinder{
+            justify-items: start;
+        }
+    }
+    margin: 50px 0;
+    
+}
+
+h2{
+    @include headings()
+}
+
+.get-started{ 
+   display: inline-block;
+   text-decoration: none;
+   background-color: rgb(225, 222, 146);
+   padding:20px 30px;
+   margin: 20px 0px;
+   color: white;
+   text-align: center;
+   font-size: larger;
+   font-family: $font-headings;
+}
+
+.projects{
+    padding-bottom: 30px;
+    .spense{
+        margin-bottom:40px;
+    }
+    .yelp{
+        margin-bottom:40px;
+    }
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about{
+    background-color: gray;
+    padding:30px 10px;
+}
+
+.contact{
+    margin: 20px 0px;
+ }
+
+ footer{
+     display: flex;
+     justify-items: center;
+     align-items: center;
+     background-color: grey;
+     padding:20px;
+
+     h3{
+         font-weight: 600;
+     }
+     .socials{
+         margin-left: auto;
+         
+         a{
+            margin: 5px;
+         }
+     }
+ }
+
+
+
+@media  screen and (min-width:480px) {
+    .leading{
+        h1{
+            font-size: 50px;
+        }
+    }
+}
+
+
+
+
