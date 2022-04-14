@@ -47,6 +47,10 @@ nav{
     .hamburger{
         margin-left: auto;
     }
+
+    .get-started-nav{
+        display: none;
+    }
 }
 
 .leading{
@@ -81,8 +85,8 @@ h2{
     @include headings()
 }
 
-.get-started{ 
-   display: inline-block;
+@mixin get {
+  display: inline-block;
    text-decoration: none;
    background-color: rgb(225, 222, 146);
    padding:20px 30px;
@@ -91,6 +95,11 @@ h2{
    text-align: center;
    font-size: larger;
    font-family: $font-headings;
+}
+
+.get-started{ 
+   @include get()
+   
 }
 
 .projects{
@@ -156,6 +165,80 @@ h2{
             justify-self: end;
         }
 
+    }
+}
+
+@media  screen and (min-width:900px) {
+    nav{
+        .hamburger{
+            display: none;
+        }
+        .links{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-inline: auto;
+
+            li{
+                list-style: none;
+                a{
+                   margin: 15px;
+                   text-decoration: none;
+                   color: white; 
+                } 
+            }
+
+        }
+
+        .get-started-nav{
+            display: block;
+            @include get()
+        }
+
+    }
+
+    .leading{
+        h1, p{
+          display: grid;  
+          grid-template-columns: 1fr 1fr;
+          width: 100%;
+          grid-area: 1/2;
+        }
+
+        .logos
+        {
+            display:flex;
+            justify-content: space-between;
+        }
+    }
+
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:20px;
+    }
+
+    .about{
+        h2{
+            font-size: 30px;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        place-items: center;
+
+    }
+
+    .contact{
+        h2{
+            font-size: 30px;
+        }
+        h2,p{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-area: 1/2;
+        }
+        
     }
 }
 
