@@ -67,10 +67,10 @@ nav{
         padding: 40px 0px;
 
         .visa{
-            justify-items: end;
+            justify-self: center;
         }
         .tinder{
-            justify-items: start;
+            justify-self: start;
         }
     }
     margin: 50px 0;
@@ -147,10 +147,12 @@ h2{
         .logos{
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            place-items: center;
         }
 
-        .logos:first-child{
+        .walmart{
+            justify-self: center;
+        }
+        .morgan{
             justify-self: end;
         }
 
