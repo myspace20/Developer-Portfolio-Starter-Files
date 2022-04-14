@@ -7,6 +7,9 @@ body {
   font-family: "Inter", serif;
   padding: 0px 15px;
 }
+body p {
+  font-weight: 500;
+}
 
 nav {
   display: -webkit-box;
@@ -130,6 +133,17 @@ footer .socials a {
 @media screen and (min-width: 480px) {
   .leading h1 {
     font-size: 50px;
+  }
+  .leading .logos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  .leading .logos:first-child {
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
 }
 /*# sourceMappingURL=styles.css.map */
